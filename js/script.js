@@ -127,7 +127,7 @@ logoImg.onload = function() {
     $('#loading').fadeOut();
 };
 logoImg.crossOrigin = '';
-logoImg.src = "https://s3.postimg.org/gah8dges3/test4.png";
+logoImg.src = "https://www.dropbox.com/s/qi2q4jf2n6m0eqy/profile%20cropped.jpg?dl=0";
 $('select').on('change', function() {
     var el = this;
     $('#loading').fadeIn(function() {
