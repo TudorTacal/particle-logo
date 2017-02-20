@@ -4,15 +4,19 @@ var cvxInteractive = document.getElementById('cvx-interactive'),
     ctxReference = cvxReference.getContext('2d'),
     imgDir = "images/";
 
+
+
 var particleAttrs = {
     friction: .90,
     ease: 0.20,
     spacing: 4,
     size: 2,
-    color: "#000"
+    color: "#fff"
 };
 
 var logoImg = new Image();
+logoImg.crossOrigin = '';
+
 
 logoImg.onload = function() {
     var width = cvxInteractive.width = cvxReference.width = window.innerWidth,
@@ -122,11 +126,12 @@ logoImg.onload = function() {
     animate();
     $('#loading').fadeOut();
 };
-logoImg.src = imgDir + "google.png";
+logoImg.crossOrigin = '';
+logoImg.src = "https://s3.postimg.org/gah8dges3/test4.png";
 $('select').on('change', function() {
     var el = this;
     $('#loading').fadeIn(function() {
         window.cancelAnimationFrame(animReq);
-        logoImg.src = imgDir + el.value;
+        logoImg.src = el.value;
     });
 });
